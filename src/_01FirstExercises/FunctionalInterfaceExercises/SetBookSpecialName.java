@@ -3,7 +3,7 @@ package _01FirstExercises.FunctionalInterfaceExercises;
 import model.Book;
 
 @FunctionalInterface
-public interface GetBookFullName {
+public interface SetBookSpecialName {
 
-    public void getBookFullName(Book book);
+    public void setBookSpecialName(Book book);
 }
