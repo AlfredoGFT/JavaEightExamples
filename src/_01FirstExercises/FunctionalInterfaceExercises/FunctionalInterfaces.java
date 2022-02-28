@@ -12,7 +12,7 @@ public class FunctionalInterfaces {
     public static void main(String[] args) {
         List<Book> book1K = BookAutoBuilder.buildMultipleBooks(5, 100);
 
-        GetBookFullName getBookFullName = book -> System.out.println("ID: " + book.getId() + ". Name: " + book.getName() + ". Volume: " + book.getVolume());
+        GetBookFullName getBookFullName = book -> System.out.println(book.toString());
         getBookFullName.getBookFullName(book1K.get(1));
 
         SetBookSpecialName setBookSpecialName = book -> {
