@@ -9,6 +9,8 @@ import java.util.Random;
 
 public class BookAutoBuilder {
 
+    public static final Integer THOUSAND = 1000;
+
     public static List<Book> buildMultipleBooks(Integer quantity, Integer maxValue) {
         List<Book> books = new ArrayList<>();
         for (int i = 0; i < quantity; i++) {
