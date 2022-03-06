@@ -4,7 +4,7 @@
 - This project was created to containg a simple implementation of the principals additions on Java 8 and its comparisons.
 
 ## Basic rules
-- This repository is open only for education purposes!
+- This repository is open for educational and commercial purposes!
 - You can use it as educational material and/or for presentations but you need to **credit** the company it was created for.
 
 ## Authors
