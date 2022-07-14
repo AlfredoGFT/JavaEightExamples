@@ -39,5 +39,7 @@ public class OptionalPredicateExercises {
             System.out.println(e.getMessage());
             System.out.println("--Runtime Exception! Fourth--");
         }
+
+        BookPredicate bookPredicate = new BookPredicate();
     }
 }
