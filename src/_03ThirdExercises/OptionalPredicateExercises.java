@@ -41,5 +41,7 @@ public class OptionalPredicateExercises {
         }
 
         BookPredicate bookPredicate = new BookPredicate();
+
+        bookPredicate.normalPredicates();
     }
 }

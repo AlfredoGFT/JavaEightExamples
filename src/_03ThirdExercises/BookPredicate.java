@@ -6,6 +6,7 @@ import util.BookAutoBuilder;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -19,6 +20,16 @@ public class BookPredicate {
         Predicate<Book> isNotNull = Objects::nonNull;
         Predicate<Book> isAnImpostor = book -> !book.getName().contains("Harry Potter");
 
-        List<Book> result = books.stream().filter(startsWith).collect(Collectors.toList());
+        Long qttStartH = books.stream().filter(startsWith).count();
+        System.out.println("\nHow much Harries? " + qttStartH);
+
+        Optional<Book> harryFirst = books.stream().filter(isHarryAndVolumeOne).findFirst();
+        System.out.println("We have a first edition? " + harryFirst.isPresent());
+
+        Long qttNotNull = books.stream().filter(isNotNull).count();
+        System.out.println("How many not nulls? " + qttNotNull);
+
+        Boolean haveImpostor = books.stream().anyMatch(isAnImpostor);
+        System.out.println("Is there any impostor among us? " + haveImpostor);
     }
 }
